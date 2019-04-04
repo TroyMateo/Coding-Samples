@@ -1,0 +1,67 @@
+﻿// source: https://www.tutorialspoint.com/csharp/csharp_classes.htm
+// filename: tp_class1.cs
+// capture date: 04/03/2019
+// student: Troy Mateo
+// summary: ...
+// modifications: ...
+
+
+using System;
+
+namespace BoxApplication
+{
+    class Box
+    {
+        private double pLength;   // Length of a box
+        private double pBreadth;  // Breadth of a box
+        private double pHeight;   // Height of a box
+        
+
+        public Box()
+        {
+
+        }
+
+        public Box(double mLength, double mBreadth, double mHeight)
+        {
+            pLength = mLength;
+            pBreadth = mBreadth;
+            pHeight = mHeight;
+        }
+        public double Length
+        {
+            get => pLength;
+            set => pLength = value;
+
+        }
+        public double Breadth
+        {
+            get => pBreadth;
+            set => pBreadth = value;
+        }
+        public double Height
+        {
+            get => pHeight;
+            set => pHeight = value;
+        }
+
+    }
+    class Boxtester
+    {
+        static void Main(string[] args)
+        {
+            Box Box1 = new Box(5.0, 6.0, 7.0);   // Declare Box1 of type Box
+            Box Box2 = new Box(10.0, 12.0, 13.0);   // Declare Box2 of type Box
+            double volume = 0.0;    // Store the volume of a box here
+
+            // volume of box 1
+            volume = Box1.Length * Box1.Breadth * Box1.Height;
+            Console.WriteLine("Volume of Box1 : {0}", volume);
+
+            //// volume of box 2
+            volume = Box2.Height * Box2.Length * Box2.Breadth;
+            Console.WriteLine("Volume of Box2 : {0}", volume);
+            Console.ReadKey();
+        }
+    }
+}
