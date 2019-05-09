@@ -53,5 +53,5 @@ namespace Distinction1
     }
 }
 //Output
-//List before removing duplicates:  1 2 2 3 4 4
-//List after removing duplicates:  1 2 3 4
+//List before removing duplicates:  1 2 2 3 4 4 5 5 5
+//List after removing duplicates:  1 2 3 4 5
